@@ -1,0 +1,116 @@
+body{
+    font-family:'Rubik Vinyl';
+    margin:0;
+    padding: 0; 
+    font-size: 32px;
+    background: url('../images/main-back.png') no-repeat;
+    background-size: cover;
+    color:#231B30;
+}
+.game {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 60px;
+    align-self: center;
+    align-items: center;
+}
+
+.info-panel{
+    display: flex;
+    flex-direction: row;
+    order: -1;
+    gap: 15px;
+    width: 460px;
+    padding: 20px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius:70px;
+}
+.info-panel .button{
+    display: block;
+    align-self: center;
+    min-width: 50px;
+    height: 50px;
+    background: url('../images/button-restart.svg') no-repeat;
+    background-size: contain;
+    border: none;
+}
+
+
+.scoreContainer {
+    display: flex;
+    flex-direction: row;
+    width: 480px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.field-back{
+    width: auto;
+    height: auto;
+    border: solid 10px #ffffff;
+    border-radius: 15px;
+}
+
+.field {
+    display: flex;
+    position:relative;
+    overflow: hidden;
+    flex-direction: column-reverse;
+    width: 440px;
+    height: 495px;
+    margin: 10px;
+    background-image: url('../images/tile.png');
+    background-size: 55px;
+    background-repeat: repeat;
+
+}
+
+.block {
+    display: block;
+    position: absolute;
+    margin: 1px;
+    
+    transition: bottom 0.5s 0.2s;
+}
+
+.block-0 {
+    width: 53px;
+    height: 53px;
+    padding: 1px;
+}
+
+.block-1 {
+    width: 53px;
+    height: 53px;
+    background: url('../images/block-1.svg') no-repeat;
+}
+
+.block-2 {
+    width: 108px;
+    height: 53px;
+    background: url('../images/block-2.svg') no-repeat;
+}
+
+.block-3 {
+    width: 163px;
+    height: 53px;
+    background: url('../images/block-3.svg') no-repeat;
+}
+
+.block-4 {
+    width: 218px;
+    height: 53px;
+    background: url('../images/block-4.svg') no-repeat;
+}
+
+.active-block::after{
+    display: block;
+    width: inherit;
+    position:absolute;
+    left: inherit;
+    bottom: 0px;
+    height: 495px;
+    background-color: rgba(227, 216, 176, 0.5);
+}
